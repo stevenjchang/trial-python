@@ -9,7 +9,7 @@ const Home = () => {
 
   const handleLogout = async () => {
     try {
-      await api.post('/logout/');
+      await api.post('api/users/logout/');
       logout();
       navigate('/'); // Redirect to home after logout
     } catch (error) {
@@ -24,10 +24,10 @@ const Home = () => {
         <button onClick={handleLogout}>Logout</button>
       ) : (
         <div>
-          <Link to="/login">
+          <Link to='/login'>
             <button>Login</button>
           </Link>
-          <Link to="/signup">
+          <Link to='/signup'>
             <button>Signup</button>
           </Link>
         </div>
